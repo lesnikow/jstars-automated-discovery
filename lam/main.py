@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """main module
 Define our main module for our lunar anomalies project.
+Use evaluate.py instead.
 """
 
 import math
