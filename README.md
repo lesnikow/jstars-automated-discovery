@@ -5,9 +5,9 @@ JSTARS Automated Discovery
 [![Linted with pylint](https://img.shields.io/badge/linting-pylint-green)](https://github.com/PyCQA/pylint)
 
 
-<img width="422" alt="ab" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/90c589e3-168f-4863-8a7e-06b6fef172e7">
-<img width="420" alt="cd" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/e15ecfd0-8d07-435f-8888-31e805c0fdc8">
-<img width="419" alt="ef" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/8f861370-f4e1-4d1d-8dcb-5465bb25a476">
+<img width="256" alt="ab" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/90c589e3-168f-4863-8a7e-06b6fef172e7">
+<img width="256" alt="cd" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/e15ecfd0-8d07-435f-8888-31e805c0fdc8">
+<img width="256" alt="ef" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/8f861370-f4e1-4d1d-8dcb-5465bb25a476">
 
 A machine learning-based method for finding scientifically-relevant lunar anomalies such as landed assets, volcanic pit skylights, irregular mare patches, recent impacts, and rockfalls. 
 
