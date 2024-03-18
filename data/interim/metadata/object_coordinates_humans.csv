@@ -1,0 +1,53 @@
+OID_;SHORT_NAME;MISSION;OBJECT;LATITUDE;LON_360;LONGITUDE;RADIUS;RAD_SRC;UNCERTAIN;raster
+0;A11 LRRR;Apollo 11;Retroreflector;0.6734487;23.47307;23.47307;0.5;Laser Ranging;0;1
+0;A14 LRRR;Apollo 14;Retroreflector;-3.6441667;342.5213519;-17.4786481;0.5;Laser Ranging;0;1
+0;A15 LRRR;Apollo 15;Retroreflector;26.133405;3.6285011;3.6285011;0.5;Laser Ranging;0;1
+0;Lunokhod 1;Luna 17;Retroreflector: Lunokhod 1 Rover;38.3151705;324.9920185;-35.0079815;5;Laser Ranging;0;1
+0;Lunokhod 2;Luna 21;Retroreflector: Lunokhod 2 Rover;25.8323185;30.9221468;30.9221468;5;Laser Ranging;0;1
+0;A11 LM;Apollo 11;Landing Module;0.67416;23.47314;23.47313799;10;NAC DTM + Laser Ranging;0.3;1
+0;A11 PSE;Apollo 11;Passive Seismic Experiment;0.67322;23.47315;23.47314967;1;NAC DTM + Laser Ranging;0.4;1
+0;A12 LM;Apollo 12;Landing Module;-3.0128;336.5781;-23.4219;10;NAC DTM;2.2;1
+0;A12 ALSEP;Apollo 12;ALSEP Central Station;-3.0098;336.5752;-23.4248;2;NAC DTM;2.2;1
+0;A12 PSE;Apollo 12;Passive Seismic Experiment;-3.0099;336.5751;-23.4249;1;NAC DTM;2.6;1
+0;A14 LM;Apollo 14;Landing Module;-3.64589;342.52806;-17.47194;10;NAC DTM + Laser Ranging;0.4;1
+0;A14 ALSEP;Apollo 14;ALSEP Central Station;-3.64419;342.52232;-17.47768;2;NAC DTM + Laser Ranging;0.4;1
+0;A14 PSE;Apollo 14;Passive Seismic Experiment;-3.64408;342.52233;-17.47767;1;NAC DTM + Laser Ranging;0.4;1
+0;A15 LM;Apollo 15;Landing Module;26.13239;3.6333;3.6333;10;NAC DTM + Laser Ranging;1;1
+0;A15 ALSEP;Apollo 15;ALSEP Central Station;26.13406;3.62991;3.62991;2;NAC DTM + Laser Ranging;0.5;1
+0;A15 PSE;Apollo 15;Passive Seismic Experiment;26.13411;3.6298;3.6298;1;NAC DTM + Laser Ranging;0.3;1
+0;A15 LRV;Apollo 15;Lunar Roving Vehicle;26.13174;3.63803;3.63803;5;NAC DTM + Laser Ranging;0.5;1
+0;A16 LM;Apollo 16;Landing Module;-8.9734;15.5011;15.5011;10;NAC DTM;3;1
+0;A16 ALSEP;Apollo 16;ALSEP Central Station;-8.9759;15.4986;15.4986;2;NAC DTM;3;1
+0;A16 PSE;Apollo 16;Passive Seismic Experiment;-8.9759;15.4986;15.4986;1;NAC DTM;2.5;1
+0;A16 LRV;Apollo 16;Lunar Roving Vehicle;-8.9729;15.5037;15.5037;5;NAC DTM;3.7;1
+0;A17 LM;Apollo 17;Landing Module;20.1911;30.7723;30.7723;10;NAC DTM;3.5;1
+0;A17 ALSEP;Apollo 17;ALSEP Central Station;20.1923;30.7655;30.7655;2;NAC DTM;3.5;1
+0;A17 LRV;Apollo 17;Lunar Roving Vehicle;20.1896;30.7769;30.7769;5;NAC DTM;3.2;1
+0;A17 SEP;Apollo 17;Surface Electrical Properties Experiment;20.192;30.7768;30.7768;1;NAC DTM;3.7;1
+0;Surveyor 1;Surveyor 1;Lander;-2.4745;316.6602;-43.3398;5;GLD100;5.6;1
+0;Surveyor 3;Surveyor 3;Lander;-3.0162;336.582;-23.418;5;NAC DTM;2.6;1
+0;Surveyor 5;Surveyor 5;Lander;1.4551;23.1943;23.1943;5;GLD100;11.9;1
+0;Surveyor 6;Surveyor 6;Lander;0.4742;358.5725;-1.4275;5;GLD100;6.7;1
+0;Surveyor 7;Surveyor 7;Lander;-40.9812;348.4873;-11.5127;5;GLD100;3.5;1
+0;Luna 16;Luna 16;Lander;-0.5137;56.3638;56.3638;5;NAC DTM;3.7;1
+0;Luna 17;Luna 17;Lander;38.23764;324.99837;-35.00163;5;NAC DTM + Laser Ranging;0.5;1
+0;Luna 20;Luna 20;Lander;3.7863;56.6242;56.6242;5;NAC DTM;4.3;1
+0;Luna 21;Luna 21;Lander;25.9994;30.4076;30.4076;5;NAC DTM;13.4;1
+0;Luna 23;Luna 23;Lander;12.6667;62.1511;62.1511;5;NAC DTM;3;1
+0;Luna 24;Luna 24;Lander;12.7142;62.2129;62.2129;5;NAC DTM;3.7;1
+0;Chang'e 3;Chang'e 3;Lander;44.1214;340.4883;-19.5117;5;NAC DTM;9.1;1
+0;Yutu Rover;Chang'e 3;Yutu Rover;44.1208;340.4878;-19.5122;5;NAC DTM;12.9;1
+0;Ranger 6;Ranger 6;Spacecraft impact site;9.3864;21.4806;21.4806;100;NAC DTM;4.4;1
+0;Ranger 7;Ranger 7;Spacecraft impact site;-10.634;339.323;-20.677;100;GLD100;6.4;1
+0;Ranger 8;Ranger 8;Spacecraft impact site;2.6376;24.7881;24.7881;100;GLD100;4.9;1
+0;Ranger 9;Ranger 9;Spacecraft impact site;-12.8281;357.6116;-2.3884;100;NAC DTM;5.8;1
+0;A13 SIVB;Apollo 13;Saturn V S-IVB impact site;-2.555;332.1125;-27.8875;100;NAC DTM;9.8;1
+0;A14 SIVB;Apollo 14;Saturn V S-IVB impact site;-8.181;333.9695;-26.0305;100;GLD100;4.5;1
+0;A15 SIVB;Apollo 15;Saturn V S-IVB impact site;-1.2897;348.1755;-11.8245;100;NAC DTM;3.8;1
+0;A16 SIVB;Apollo 16;Saturn V S-IVB impact site;1.921;335.377;-24.623;100;GLD100;19.2;1
+0;A17 SIVB;Apollo 17;Saturn V S-IVB impact site;-4.1681;347.6693;-12.3307;100;NAC DTM;5.6;1
+0;GRAIL-A;GRAIL;Spacecraft impact site;75.6088;333.406;-26.594;100;NAC DTM;10.7;1
+0;GRAIL-B;GRAIL;Spacecraft impact site;75.6508;333.1659;-26.8341;100;NAC DTM;12.2;1
+0;LADEE;LADEE;Spacecraft impact site;11.8494;266.7506;-93.2494;100;NAC DTM;6.1;1
+0;Beresheet;Beresheet;Spacecraft impact site;32.5956;19.3496;19.3496;100;GLD100;10.7;1
+0;Vikram;Vikram;Spacecraft impact site;70.8810;22.7840;22.7840;100;GLD100;10.7;1
