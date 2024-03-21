@@ -29,17 +29,18 @@ import plotters
 import utils
 import vae_cnn
 import vae_losses
+from metrics import KDE_Plot
 from metrics import PrecisionRecallCurve, RecieverOperatingCharacteristicCurve
 from vae_cnn import VAE_CNN
 from vae_losses import LossVAE
 
 
 def main():
-    experiment_user_string = "stage_iii_train1_squares_2K_debug"
+    experiment_user_string = "train_jstars"
     mode = "train"
     load_saved_model = False
     if load_saved_model:
-        load_saved_model_fp = "/arts/exp_time_21672095__stage_ii_train_020_gcp_train/models/model_eoe_42.pt"
+        load_saved_model_fp = os.path.join("models", "model.pt")
     print("\n\nStarting {}...".format(experiment_user_string))
 
     if mode == "train":
@@ -79,7 +80,7 @@ def main():
         )
 
     if mode == "train":
-        train_root_fp = "/btrfs2/squares_debug800"
+        train_root_fp = "data/processed/train/"
         train_dataset = data.LunarDataset(
             root=train_root_fp, mode="train", verbose=True
         )
@@ -121,27 +122,17 @@ def main():
             save_to_disk_fp=os.path.join(exp_dir_fp, "curves", "roc_curve"),
         )
         roc_curve.make_plot(show=False)
+        
+        kde_plot = KDE_Plot(
+            y_labels,
+            y_scores,
+            pos_label=0,
+            save_to_disk_fp=os.path.join(exp_dir_fp, "kde_plot"),
+        )
+        kde_plot.make_plot(show=False)
 
-        def make_kde_figure():
-            number_of_positive_samples = 3
-            ax = sns.kdeplot(y_scores, shade=True, bw=0.05, legend=True)
-            ax.set_title("Positive Samples (bottom) Over Background Distribution")
-            ax.set_xlabel("Anomaly Score")
-            ax.set_ylabel("Density")
-            rugplot_positive_samples = sns.rugplot(
-                y_scores[:number_of_positive_samples], height=0.05
-            )
-            figure_positive_samples = rugplot_positive_samples.get_figure()
-            figure_positive_samples.savefig(
-                os.path.join(
-                    exp_dir_fp, "distribution_plots", "positives_samples_figure"
-                )
-            )
-
-        make_kde_figure()
 
         samples_df["anomaly_score"][: len(y_scores)] = y_scores
-
         samples_df = samples_df[: len(y_scores)]
         samples_df = samples_df.sort_values("anomaly_score", ascending=False)
         sorted_samples_fps = pd.Series(samples_df["sample_filepath"]).to_list()
@@ -187,7 +178,6 @@ def main():
                 loss_to_use=loss,
                 plotter=plotter,
                 device=device,
-                exp_dir_fp=exp_dir_fp,
                 batch_size=batch_size,
             )
             torch.save(
