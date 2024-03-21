@@ -8,6 +8,7 @@ attrs==19.3.0
 backcall==0.1.0
 black == 21.11b1
 bleach==3.1.5
+bs4
 certifi==2020.4.5.1
 chardet==3.0.4
 cycler==0.10.0
