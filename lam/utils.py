@@ -25,7 +25,8 @@ class Utilitator:
         # time_zero is the time on beginning of UNIX time.
         time_zero = 0
         experiment_directory_stamp = "exp_time_{}".format(int(time.time()) - time_zero)
-        repository_home_directory = "/home/adam/lunar-anomalies/"
+        repository_home_directory = os.getcwd()
+
         experiment_directory = os.path.join(
             repository_home_directory,
             "results",
@@ -44,7 +45,8 @@ class Utilitator:
             try:
                 if self.verbose:
                     print(
-                        f"experiment_directory, sub_dir are {experiment_directory} {sub_dir}"
+                        f"experiment_directory, sub_dir are {experiment_directory}"
+                        f"{sub_dir}"
                     )
                 os.makedirs(os.path.join(experiment_directory, sub_dir))
             except FileExistsError:
