@@ -1,5 +1,9 @@
 # Directories to ignore specific to this project
+data/processed/
+data/raw/
+models/
 notes_usr/
+results/
 
 # Vim swap files
 *.sw*
