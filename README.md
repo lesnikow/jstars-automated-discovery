@@ -52,6 +52,13 @@ To perform a KS test on anomaly scores for the 'rockfall' feature:
 python lam/evaluate.py --feature_str rockfall --make_ks_test
 ```
 
+### Known issues
+
+There are currently hard-coded paths in a couple areas of the codebase, e.g. in `evaluate.py`. 
+The plan is to update these hard-coded paths either to sensible generic defaults or user-inputted paths.
+If you're feeling up for it, you can update these paths for your own local setup.
+In the meantime, watch out for updates here to make setup and runs easier for new users. 
+
 
 
 
