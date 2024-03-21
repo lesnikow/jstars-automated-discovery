@@ -284,7 +284,7 @@ def make_kde_plot(anom_scores, labels, feature_str, show_kde_plot=False):
 
     # Save, show, close.
     save_fp = os.path.join(
-        "reports", "isprs_2023", "figures", f"kde_plot_{feature_str}.png"
+        "results", f"kde_plot_{feature_str}.png"
     )
 
     plt.savefig(save_fp, bbox_inches="tight")
@@ -410,14 +410,14 @@ def make_ks_statistics_table(
 
     # Also print out the dataframe of statistics in a .csv file.
     ks_statistics_table_fp = os.path.join(
-        "reports", "isprs_2023", "tables", "ks_statistics_table.csv"
+        "results", "ks_statistics_table.csv"
     )
     ks_statistics_table.to_csv(ks_statistics_table_fp, index=False)
     logging.info("Saved ks_statistics_table to %s", ks_statistics_table_fp)
 
     # Also print out the dataframe of statistics in a .tex file.
     ks_statistics_table_tex_fp = os.path.join(
-        "reports", "isprs_2023", "tables", "ks_statistics_table.tex"
+        "results", "ks_statistics_table.tex"
     )
     ks_statistics_table.to_latex(ks_statistics_table_tex_fp, index=False)
     logging.info("Saved ks_statistics_table to %s", ks_statistics_table_tex_fp)
@@ -435,7 +435,7 @@ def make_precision_recall_curve(
         pos_label=1,
         feature_str=feature_str,
         save_to_disk_fp=os.path.join(
-            "reports", "isprs_2023", "figures", f"pr_curve_feature_{feature_str}"
+            "results", f"pr_curve_feature_{feature_str}"
         ),
     )
     prc.make_plot(show=False, verbose=False)
@@ -641,9 +641,7 @@ def make_pil_mosaic(
         new_im = new_im.crop((0, 0, total_width, total_height - height))
 
     out_mosaic_fp = os.path.join(
-        "reports",
-        "isprs_2023",
-        "figures",
+        "results",
         f"feature_{feature_str}_{save_fp_top_or_random}_{len(images)}_patches_grid.png",
     )
     new_im.save(out_mosaic_fp)
@@ -1174,9 +1172,7 @@ def make_tsne_plot(
         f"time_{datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S')}.png"
     )
     save_fp = os.path.join(
-        "reports",
-        "isprs_2023",
-        "figures",
+        "results",
         save_name,
     )
     plt.savefig(save_fp, dpi=dpi, bbox_inches="tight", pad_inches=0.0)
@@ -1295,9 +1291,7 @@ def make_grid_map(
 
     fig.tight_layout()
     save_path = os.path.join(
-        "reports",
-        "isprs_2023",
-        "figures",
+        "results",
         f"anomaly_map_{lroc_id}_in_{feature_str}_set.png",
     )
     plt.savefig(
