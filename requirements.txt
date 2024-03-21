@@ -17,7 +17,6 @@ entrypoints==0.3
 future==0.18.2
 h5py==2.10.0
 idna==2.9
-imagecodecs==2020.2.18
 imageio==2.8.0
 importlib-metadata==1.6.0
 ipykernel==5.2.1
@@ -85,12 +84,12 @@ testpath==0.4.4
 threadpoolctl==2.0.0
 tifffile==2020.5.11
 toml==0.10.1
-torch==1.5.0+cu101
-torchvision==0.6.0+cu101
+torch==1.5.0
+torchvision==0.6.0
 tornado==6.0.4
 tqdm==4.46.0
 traitlets==4.3.3
-typed-ast==1.4.1
+typed-ast
 urllib3==1.25.9
 wcwidth==0.1.9
 webencodings==0.5.1
