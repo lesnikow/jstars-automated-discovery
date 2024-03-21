@@ -294,3 +294,58 @@ class PrecisionRecallCurve(Curve):
            None
         """
         super().make_plot(show=show, verbose=verbose, plot_type=plot_type)
+
+    
+class KDE_Plot():
+    def __init__(
+        self,
+        y_test: [] = None,
+        y_scores: [] = None,
+        pos_label: int = None,
+        feature_str: str = None,
+        save_to_disk_fp: str = None,
+    ):
+        """Init method for our KDE_Plot class.
+
+        Args:
+            y_test: the list of true labels
+            y_scores: the list of model scores
+            pos_label: the torch index to use as our positive class
+            save_to_disk_fp: the string where to save our PR curve
+
+        Returns:
+            None
+        """
+        self.y_test = y_test
+        self.y_scores = y_scores
+        self.pos_label = pos_label
+        self.feature_str = feature_str
+        self.save_to_disk_fp = save_to_disk_fp
+
+    def make_plot(
+        self,
+        show: bool = None,
+        verbose: bool = False,
+    ):
+        """Makes a KDE plot. 
+
+        Args:
+            show: Whether to show the plot on-scren via e.g. plt.show()
+            verbose: Whether to enable verbose mode to print various
+                information on screen.
+
+        Returns:
+           None
+        """
+        number_of_positive_samples = 4
+        ax = sns.kdeplot(y_scores, shade=True, bw=0.05, legend=True)
+        ax.set_title("Positive Samples (bottom) Over Background Distribution")
+        ax.set_xlabel("Anomaly Score")
+        ax.set_ylabel("Density")
+        rugplot_positive_samples = sns.rugplot(
+            y_scores[:number_of_positive_samples], height=0.05
+        )
+        figure_positive_samples = rugplot_positive_samples.get_figure()
+        if self.save_to_disk_fp is not None:
+            figure_positive_samples.savefig(self.save_to_disk_fp)
+
