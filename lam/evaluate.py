@@ -161,7 +161,7 @@ def inference_on_lroc_raws(feature_str, lroc_raws_save_fp, model_fp, inference_b
             logging.info(
                 "We got an inference module RuntimeError. Passing without further error handling."
             )
-            logging.debug(e)
+            logging.info(e)
     else:
         logging.info("Skipping inference, since inference_bool is %s", inference_bool)
     return out_inference_fp
@@ -1377,12 +1377,14 @@ def main(
     out_inference_fp = inference_on_lroc_raws(
         feature_str, lroc_raws_save_fp, model_fp, inference_bool
     )
-    (
-        anom_scores,
-        anom_scores_positives,
-        anom_scores_positives_list,
-        labels,
-    ) = generate_anom_scores_and_labels(label_lines, out_inference_fp)
+
+    if not download_raws_bool:
+        (
+            anom_scores,
+            anom_scores_positives,
+            anom_scores_positives_list,
+            labels,
+        ) = generate_anom_scores_and_labels(label_lines, out_inference_fp)
 
     if make_pr_curve_bool:
         make_precision_recall_curve(
