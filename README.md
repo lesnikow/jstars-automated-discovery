@@ -37,24 +37,26 @@ This model file is needed to run e.g. `evaluate.py` without having to train your
 The plan is to have `evaluate` download do it automatically as a default, if needed.
 In the meantime, [download the model here](https://drive.google.com/file/d/1m3xrnoFm0gyK_UUklZmpUGc5flqpAyuw/view?usp=sharing) and manually add this `.pt` file to the `models/` directory in your local copy of this repo to have this pre-trained model available to `evaluate`.
 
-## Sample commands
-To download raw images with default settings on the Apollo 17 'ap17' feature, run:
+## Sample pipeline
+To download raw images with default settings on the volcanic pit 'pit' feature, run:
 ```bash
-python lam/evaluate.py --feature_str ap17 --download_raws
+python lam/evaluate.py --feature_str pit --download_raws
 ```
-To inference a model with default settings on the Apollo 17 'ap17' feature, and generate
-anomlay scores, run:
+To inference a model with default settings on the 'pit' feature, and generate
+anomaly scores, run:
 ```bash
-python lam/evaluate.py --feature_str ap17 --inference
+python lam/evaluate.py --feature_str pit --inference
 ```
-To generate a precision-recall curve and a KDE plot for the 'crater' feature:
+To perform a KS test on anomaly scores for the 'pit' feature:
 ```bash
-python lam/evaluate.py --feature_str crater --make_pr_curve --make_kde_plot
+python lam/evaluate.py --feature_str pit --make_ks_test
 ```
-To perform a KS test on anomaly scores for the 'rockfall' feature:
+To generate a precision-recall curve and a KDE plot for the 'pit' feature:
 ```bash
-python lam/evaluate.py --feature_str rockfall --make_ks_test
+python lam/evaluate.py --feature_str pit --make_pr_curve --make_kde_plot
 ```
+
+Other features to try this pipeline on include 'crater', 'imp', 'rockfall', and Apollo 16 landing site 'ap16', replacing 'pit' with these features in the commands above.
 
 ### Known issues
 
