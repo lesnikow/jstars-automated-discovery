@@ -207,8 +207,10 @@ if __name__ == "__main__":
         "-o",
         type=str,
         default=default_args["out_fp_base"],
-        help=f"Path to output directory for lam files. Default:
-        \"{default_args['out_fp_base']}\"",
+        help=(
+            f"Path to output directory for lam files. Default: "
+            f"\"{default_args['out_fp_base']}\""
+        )
     )
     parser.add_argument(
         "--exp_str",
@@ -229,8 +231,10 @@ if __name__ == "__main__":
         "-l",
         type=float,
         default=default_args["loss_lambda"],
-        help=f"Lambda for distribution loss. Default:
-        {default_args['loss_lambda']}",
+        help=(
+            f"Lambda for distribution loss. Default: "
+            f"{default_args['loss_lambda']}"
+        )
     )
     parser.add_argument(
         "--seed",
