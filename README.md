@@ -26,6 +26,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Pre-trained model download
+
+There is a pre-trained model .pt file not being tracked in git due to it being a large binary file.
+This model file is needed to run e.g. `evaluate.py` without having to train your own model. 
+The plan is to have `evaluate` download do it automatically as a default, if needed.
+In the meantime, [download the model here](https://drive.google.com/file/d/1m3xrnoFm0gyK_UUklZmpUGc5flqpAyuw/view?usp=sharing) and manually add this `.pt` file to the `models/` directory in your local copy of this repo to have this pre-trained model available to `evaluate`.
+
 ## Sample commands
 To download raw images with default settings on the Apollo 17 'ap17' feature, run:
 ```bash
@@ -44,6 +51,7 @@ To perform a KS test on anomaly scores for the 'rockfall' feature:
 ```bash
 python lam/evaluate.py --feature_str rockfall --make_ks_test
 ```
+
 
 
 
