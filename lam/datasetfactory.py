@@ -1,7 +1,23 @@
 # -*- coding: utf-8 -*-
 """datasetfactory module
-Define the module that encapsulates attributes and methods related to
-dataset creation we use for our lunar anomalies project.
+Define the module that encapsulates attributes and methods related to dataset
+creation we use for our lunar anomalies project.
+
+You will first need to download raw images for this script to work properly, by
+using e.g.
+
+python3 lam/evaluate.py --feature_str pit --download
+
+or by using the ASU PDS and putting these raw LROC images into the data/raw/
+directory.
+
+After this, update in_img_dir below to the directory path of the raw .tiff
+files. The default im_img_dir should work if you run the above python3 command
+with the "pit" feature_str.
+
+Also note cnt_lim below. The default value 2**2 is low to test this module is
+working for you. For real training runs, something like cnt_lim = 2*20 will
+generate appropriately sized large training sets, as in the JSTARS paper.
 """
 import os
 import random
@@ -17,45 +33,43 @@ def main():
     """Main function to generate our image squares dataset."""
     Image.MAX_IMAGE_PIXELS = 5e8
 
-    dataset_root = "/btrfs/raws"
-    in_img_dir = ""
-    out_img_dir = "/btrfs2/squares"
+    in_img_dir = f"data/raw/pit/class_0/"
+    out_img_dir = "data/processed/train/class_0/"
     dsf = DatasetFactory(
-        dataset_root=dataset_root,
         in_img_dir=in_img_dir,
         out_img_dir=out_img_dir,
         verbose=True,
     )
-    in_img_mission_str = ""
 
-    in_img_ids_fp = join(dsf.dataset_root, dsf.in_img_dir)
+    dsf.in_img_dir
     in_img_ids = sorted(
         [
             f.split(".")[0]
-            for f in listdir(in_img_ids_fp)
-            if isfile(join(in_img_ids_fp, f))
+            for f in listdir(dsf.in_img_dir)
+            if isfile(join(dsf.in_img_dir, f))
         ][:]
     )
+    print(f"in_imgs_dir is {in_img_dir}")
+    print(f"in_img_ids is {in_img_ids}")
     random.shuffle(in_img_ids)
 
     for in_img_id in tqdm.tqdm(in_img_ids):
         if in_img_id == "":
             continue
         dsf.make_crops_one_img(
-            in_img_mission_str=in_img_mission_str, in_img_id=in_img_id, verbose=True
+            in_img_id=in_img_id, 
+            verbose=True
         )
 
 
 class DatasetFactory:
     def __init__(
         self,
-        dataset_root=None,
         in_img_dir=None,
         out_img_dir=None,
         verbose=False,
     ):
         # Class attributions
-        self.dataset_root = dataset_root
         self.verbose = verbose
 
         # Input data information.
@@ -69,7 +83,6 @@ class DatasetFactory:
     def make_crops_one_img(
         self,
         cnt_lim=None,
-        in_img_mission_str=None,
         in_img_id=None,
         in_img_ext=".tif",
         out_img_id=None,
@@ -81,17 +94,14 @@ class DatasetFactory:
         """Makes out image crops for one image."""
 
         # Defaults in no other input given.
-        if in_img_mission_str is None:
-            in_img_mission_str = "ap11"
         if in_img_id is None:
             in_img_id = "M102000149RC"
         if cnt_lim is None:
-            cnt_lim = 2 ** 20
+            cnt_lim = 2 ** 1
         if verbose is None:
             verbose = self.verbose
 
         in_fp = os.path.join(
-            self.dataset_root,
             self.in_img_dir,
             in_img_id + in_img_ext,
         )
@@ -102,8 +112,8 @@ class DatasetFactory:
             print("In image height: {}\n".format(img_height))
 
         # Image outs.
-        out_img_mission_str, out_img_id = in_img_mission_str, in_img_id
-        self.out_fp = os.path.join(self.dataset_root, self.out_img_dir, out_img_id)
+        out_img_id = in_img_id
+        self.out_fp = os.path.join(self.out_img_dir, out_img_id)
 
         if not os.path.exists(self.out_fp):
             print("Making out dir {}\n".format(self.out_fp))
