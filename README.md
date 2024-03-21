@@ -12,6 +12,10 @@ JSTARS Automated Discovery
 A machine learning-based method for finding scientifically-relevant lunar anomalies such as landed assets, volcanic pit skylights, irregular mare patches, recent impacts, and rockfalls. 
 
 ----
+![2024-03-20_23:19:26_selection](https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/25f8c8bd-86e2-4fda-8770-52dce2ac5595)
+Overview of workflow
+
+
 For complete details, see ["Automated Discovery of Anomalous Features in Ultralarge Planetary Remote-Sensing Datasets Using Variational Autoencoder"](https://doi.org/10.1109/JSTARS.2024.3369101) in the [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing](https://www.grss-ieee.org/publications/journal-of-selected-topics-in-applied-earth-observations-and-remote-sensing/0).
 
 The DOI for this paper is [https://doi.org/10.1109/JSTARS.2024.3369101](https://doi.org/10.1109/JSTARS.2024.3369101).
