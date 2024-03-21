@@ -1,27 +1,27 @@
 # -*- coding: utf-8 -*-
-"""main module
-Define our main module for our lunar anomalies project.
+"""train module
+Define our train module for our lunar anomalies project.
+This module is used to train our VAE model. 
 """
 
 import math
 import os
+import pickle
 import shutil
 import sys
 import time
-
-import torch
 from importlib import reload
+from pprint import pprint
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pickle
 import scipy
 import seaborn as sns
-from pprint import pprint
+import torch
 from torch import nn, optim
 from torch.nn import functional as F
-from torchvision import transforms
-from torchvision.utils import save_image
+from torchvision import transforms, utils
 from tqdm import tqdm
 
 import data
