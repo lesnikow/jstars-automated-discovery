@@ -16,7 +16,7 @@ A machine learning-based method for finding scientifically-relevant lunar anomal
 Graphical overview
 
 
-For complete details, see ["Automated Discovery of Anomalous Features in Ultralarge Planetary Remote-Sensing Datasets Using Variational Autoencoder"](https://doi.org/10.1109/JSTARS.2024.3369101) in the [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing](https://www.grss-ieee.org/publications/journal-of-selected-topics-in-applied-earth-observations-and-remote-sensing/0).
+For complete details, see ["Automated Discovery of Anomalous Features in Ultralarge Planetary Remote-Sensing Datasets Using Variational Autoencoders"](https://doi.org/10.1109/JSTARS.2024.3369101) in the [IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing](https://www.grss-ieee.org/publications/journal-of-selected-topics-in-applied-earth-observations-and-remote-sensing/0).
 
 The DOI for this paper is [https://doi.org/10.1109/JSTARS.2024.3369101](https://doi.org/10.1109/JSTARS.2024.3369101), and it is also avaialble [on the arXiv](https://arxiv.org/abs/2403.07424).
 
