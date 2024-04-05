@@ -25,8 +25,9 @@ The DOI for this paper is [https://doi.org/10.1109/JSTARS.2024.3369101](https://
 
 ## Setup
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv jst
+source jst/bin/activate
+cd jstars-automated-discovery
 pip install -r requirements.txt
 ```
 
