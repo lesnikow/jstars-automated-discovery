@@ -9,7 +9,7 @@ JSTARS Automated Discovery
 <img width="256" alt="cd" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/e15ecfd0-8d07-435f-8888-31e805c0fdc8">
 <img width="256" alt="ef" src="https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/8f861370-f4e1-4d1d-8dcb-5465bb25a476">
 
-A machine learning-based method for finding scientifically-relevant lunar anomalies such as landed assets, volcanic pit skylights, irregular mare patches, recent impacts, and rockfalls. 
+A machine learning-based method for finding scientifically-relevant lunar anomalies such as landed assets, volcanic pit skylights, irregular mare patches, recent impacts, rockfalls, and more. 
 
 ----
 ![2024-03-20_23:19:26_selection](https://github.com/lesnikow/jstars-automated-discovery/assets/8730814/25f8c8bd-86e2-4fda-8770-52dce2ac5595)
