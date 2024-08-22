@@ -60,10 +60,9 @@ Other features to try this pipeline on include 'crater', 'imp', 'rockfall', and 
 
 ### Known issues
 
-There are currently hard-coded paths in a couple areas of the codebase, e.g. in `evaluate.py`. 
-The plan is to update these hard-coded paths either to sensible generic defaults or user-inputted paths.
-If you're feeling up for it, you can update these paths for your own local setup.
-In the meantime, watch out for updates here to make setup and runs easier for new users. 
+This codebase currently has issues working with Windows machines. 
+Please contribute any corrections or updates towards making it work
+seamlessly across Linux, Windows, and BSD derivatives like Mac OS X.
 
 
 
