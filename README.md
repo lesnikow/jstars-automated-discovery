@@ -62,7 +62,7 @@ Other features to try this pipeline on include 'crater', 'imp', 'rockfall', and 
 
 This codebase currently has issues working with Windows machines. 
 Please contribute any corrections or updates towards making it work
-seamlessly across Linux, Windows, and BSD derivatives like Mac OS X.
+seamlessly across Linux, Windows, and BSD derivatives like Mac OS X!
 
 
 
